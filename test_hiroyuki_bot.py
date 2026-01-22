@@ -5,6 +5,7 @@
 Tests for Hiroyuki-style chatbot
 """
 
+import sys
 from hiroyuki_bot import HiroyukiBot
 
 
@@ -94,4 +95,4 @@ def run_all_tests():
 
 if __name__ == '__main__':
     success = run_all_tests()
-    exit(0 if success else 1)
+    sys.exit(0 if success else 1)

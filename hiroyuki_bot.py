@@ -72,8 +72,8 @@ class HiroyukiBot:
             random.choice(self.hiroyuki_phrases),
         ]
         
-        # 質問形式の場合
-        if '？' in user_input or '?' in user_input:
+        # 質問形式の場合 (?, ?, か at the end, etc.)
+        if re.search(r'[？?]|か$', user_input):
             return random.choice([
                 'んー、それは難しい質問ですねー',
                 'それってあなたの感想ですよね？',
